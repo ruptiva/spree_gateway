@@ -1,10 +1,10 @@
 module Spree
-  class Gateway::Maxipago < Gateway
+  class Gateway::Recebee < Gateway
     preference :login, :string # ID
     preference :password, :string # KEY
 
     def provider_class
-      ActiveMerchant::Billing::MaxipagoGateway
+      ActiveMerchant::Billing::RecebeeGateway
     end
 
     def auto_capture?

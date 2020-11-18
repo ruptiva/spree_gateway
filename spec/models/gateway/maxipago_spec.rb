@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe Spree::Gateway::Maxipago do
-  let(:gateway) { described_class.create!(name: 'Maxipago') }
+describe Spree::Gateway::Recebee do
+  let(:gateway) { described_class.create!(name: 'Recebee') }
 
   context '.provider_class' do
-    it 'is a Maxipago gateway' do
-      expect(subject.provider_class).to eq ::ActiveMerchant::Billing::MaxipagoGateway
+    it 'is a Recebee gateway' do
+      expect(subject.provider_class).to eq ::ActiveMerchant::Billing::RecebeeGateway
     end
   end
 
