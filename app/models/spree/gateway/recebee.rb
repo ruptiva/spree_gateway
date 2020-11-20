@@ -1,10 +1,11 @@
 module Spree
   class Gateway::Recebee < Gateway
-    preference :login, :string # ID
-    preference :password, :string # KEY
+    preference :login, :string
+    preference :password, :string
+    preference :account, :string
 
     def provider_class
-      ActiveMerchant::Billing::RecebeeGateway
+      ActiveMerchant::Billing::SagePayGateway
     end
 
     def auto_capture?
