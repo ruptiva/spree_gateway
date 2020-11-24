@@ -17,7 +17,7 @@ module SpreeGateway
       app.config.spree.payment_methods << Spree::Gateway::Epay
       app.config.spree.payment_methods << Spree::Gateway::Eway
       app.config.spree.payment_methods << Spree::Gateway::EwayRapid
-      app.config.spree.payment_methods << Spree::Gateway::Recebee
+      # app.config.spree.payment_methods << Spree::Gateway::Recebee
       app.config.spree.payment_methods << Spree::Gateway::Migs
       app.config.spree.payment_methods << Spree::Gateway::Moneris
       app.config.spree.payment_methods << Spree::Gateway::PayJunction
@@ -35,6 +35,10 @@ module SpreeGateway
       app.config.spree.payment_methods << Spree::Gateway::StripeAchGateway
       app.config.spree.payment_methods << Spree::Gateway::UsaEpayTransaction
       app.config.spree.payment_methods << Spree::Gateway::Worldpay
+    end
+
+    Spree::Gateway::Engine.config.after_initialize do
+      Rails.application.config.spree.payment_methods << Spree::Gateway::Recebee
     end
 
     def self.activate
