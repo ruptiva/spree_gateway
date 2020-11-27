@@ -37,7 +37,7 @@ module SpreeGateway
       app.config.spree.payment_methods << Spree::Gateway::Worldpay
     end
 
-    app.config.after_initialize do
+    config.after_initialize do
       app.config.spree.payment_methods << Spree::Gateway::Recebee
     end
 
