@@ -1,7 +1,6 @@
 module Spree
   class Gateway::Recebee < Gateway
-    preference :login, :string
-    preference :password, :string
+    preference :access_token, :string
 
     def provider_class
       ActiveMerchant::Billing::RecebeeGateway
