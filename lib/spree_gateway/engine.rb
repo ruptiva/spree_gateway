@@ -38,7 +38,7 @@ module SpreeGateway
     end
 
     config.after_initialize do
-      Rails::Application.config.spree.payment_methods << Spree::Gateway::Recebee
+      Rails.application.config.spree.payment_methods << Spree::Gateway::Recebee
     end
 
     def self.activate
