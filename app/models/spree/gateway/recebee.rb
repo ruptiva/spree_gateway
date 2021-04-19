@@ -9,5 +9,9 @@ module Spree
     def auto_capture?
       true
     end
+
+    def cancel(response)
+      void(response)
+    end
   end
 end
