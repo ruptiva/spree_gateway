@@ -7,7 +7,7 @@ module Spree
     end
 
     def auto_capture?
-      true
+      self.auto_capture
     end
 
     def cancel(response)
